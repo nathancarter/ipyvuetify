@@ -8,5 +8,7 @@ class Html(VuetifyWidget):
 
     tag = Unicode().tag(sync=True)
 
+    vue_directives = Unicode().tag(sync=True)
+
 
 __all__ = ['Html']

@@ -5,6 +5,14 @@ import Vuetify from '@mariobuikhuizen/vuetify';
 import '@mariobuikhuizen/vuetify/dist/vuetify.min.css';
 import './styles.css';
 
+// -- new (non-template) stuff
+import VuePackeryPlugin from 'vue-packery-plugin'
+import VueDraggabillyPlugin from 'vue-packery-draggabilly-plugin'
+Vue.use(VuePackeryPlugin)
+Vue.use(VueDraggabillyPlugin)
+// -- new (non-template) stuff
+console.error( 'THIS IS A TEST.' );
+
 Vue.use(Vuetify, {
     iconfont: 'md',
 });

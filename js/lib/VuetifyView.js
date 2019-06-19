@@ -18,11 +18,21 @@ export class VuetifyView extends VuetifyBaseView {
             if (model.get('tag').toLowerCase().includes('script')) {
                 return undefined;
             }
+            const processVueDirectives = dirs => {
+                console.log( 'processing these directives:', dirs );
+                try {
+                    return { directives : JSON.parse( dirs ) };
+                } catch ( e ) {
+                    console.warn( e );
+                    return { };
+                }
+            };
             return createElement(
                 model.get('tag'), {
                     ...model.get('style_') && { style: model.get('style_') },
                     ...model.get('class_') && { class: model.get('class_') },
                     ...model.get('slot') && { slot: model.get('slot') },
+                    ...model.get('vue_directives') && processVueDirectives( model.get( 'vue_directives' ) ),
                 },
                 model.get('children').map(child => (typeof child === 'string'
                     ? child

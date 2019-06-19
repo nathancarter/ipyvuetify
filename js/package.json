@@ -52,7 +52,9 @@
     "lodash": "^4.17.11",
     "material-design-icons-iconfont": "^5.0.1",
     "typeface-roboto": "0.0.54",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-packery-draggabilly-plugin": "^1.0.3",
+    "vue-packery-plugin": "^1.4.8"
   },
   "jupyterlab": {
     "extension": "lib/labplugin"
